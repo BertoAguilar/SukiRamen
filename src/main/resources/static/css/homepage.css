@@ -1,0 +1,122 @@
+@charset "UTF-8";
+.navbar{
+	border: solid 3px black;
+	background-color: rgb(238,234,213);
+	padding: 15px;
+}
+.navLogoTitle{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.navTitle{
+	font-size: 55px;
+	font-family: 'Aclonica';
+}
+.navbar a{
+	color:black;
+	text-decoration: none;
+}
+.nav-item {
+	font-size: 23px;
+	border: solid black 2px;
+    box-shadow: 2px 2px black;
+   	font-family: 'Actor';
+}
+.nav-item:hover{
+	font-size: 25px;
+	border: solid black 2px;
+    box-shadow: 5px 5px black;
+}
+.nav-logReg{
+	font-size: 23px;
+	border: solid black 2px;
+	box-shadow: 2px 2px black;
+	margin: 0 3px;
+}
+.nav-logReg:hover{
+	font-size: 25px;
+	border: solid black 2px;
+    box-shadow: 5px 5px black;
+}
+.homepageBody{
+	margin: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/img/ramen_shop.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+.homepageIconImg{
+	width: 200px;
+}
+h2 {
+	font-family: 'Aclonica';
+}
+.homepageDashboard{
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	gap:75px;
+}
+.homepageDashboard a{
+	text-decoration: none;
+}
+.homepageTitle{
+	font-family: 'Aclonica';
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 3px;
+	color: white;
+	text-shadow: black 1px 0 10px;
+}
+.topHalfHomepage, .bottomHalfHomepage{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap:75px;
+}
+.homepageMenu {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	color: white;
+	text-decoration: none;
+	text-shadow: black 1px 0 10px;
+	background: none;
+}
+.homepageLocation {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	color: white;
+	text-shadow: black 1px 0 10px;
+	background: none;
+}
+.homepageAbout {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	color: white;
+	text-shadow: black 1px 0 10px;
+	background: none;
+}
+.homepageLoginReg {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	color: white;
+	text-shadow: black 1px 0 10px;
+	background: none;
+}
+.homepageMenu:hover,
+.homepageLocation:hover,
+.homepageAbout:hover,
+.homepageLoginReg:hover {
+	box-shadow: 7px 7px black;
+	border: solid black 3px;
+	transform: scale(1.2);
+}

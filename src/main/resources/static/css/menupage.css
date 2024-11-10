@@ -1,0 +1,60 @@
+@charset "UTF-8";
+.navbar{
+	border: solid 3px black;
+	background-color: rgb(238,234,213);
+	padding: 15px;
+}
+.navLogoTitle{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.navTitle{
+	font-size: 55px;
+	font-family: 'Aclonica';
+	color:black;
+}
+.navbar a{
+	text-decoration: none;
+}
+.activeNavButton{
+	font-size: 23px;
+	border: solid gray 2px;
+   	font-family: 'Actor';
+   	color: gray;
+	
+}
+.nav-item {
+	font-size: 23px;
+	border: solid black 2px;
+    box-shadow: 2px 2px black;
+   	font-family: 'Actor';
+   	color: black;
+}
+.nav-item:hover{
+	font-size: 25px;
+	border: solid black 2px;
+    box-shadow: 5px 5px black;
+}
+.nav-logReg{
+	font-size: 23px;
+	border: solid black 2px;
+	box-shadow: 2px 2px black;
+	margin: 0 3px;
+}
+.nav-logReg:hover{
+	font-size: 25px;
+	border: solid black 2px;
+    box-shadow: 5px 5px black;
+}
+.menupageBody{
+	margin: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/img/ramen_shop.jpg') no-repeat center center/cover;
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    color: white;
+}

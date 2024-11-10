@@ -1,0 +1,47 @@
+@charset "UTF-8";
+.navbar{
+	border: solid 3px black;
+	background-color: rgb(76,114,115);
+	padding: 15px;
+}
+.navLogoTitle{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.navTitle{
+	font-size: 55px;
+	font-family: 'Aclonica';
+}
+.navbar a{
+	color:black;
+	text-decoration: none;
+}
+.activeNavButton{
+	font-size: 23px;
+	border: solid black 2px;
+   	font-family: 'Actor';
+	
+}
+.nav-item {
+	font-size: 23px;
+	border: solid black 2px;
+    box-shadow: 2px 2px black;
+   	font-family: 'Actor';
+}
+.nav-item:hover{
+	font-size: 25px;
+	border: solid black 2px;
+    box-shadow: 5px 5px black;
+}
+.nav-logReg{
+	font-size: 23px;
+	border: solid black 2px;
+	box-shadow: 2px 2px black;
+	margin: 0 3px;
+}
+.nav-logReg:hover{
+	font-size: 25px;
+	border: solid black 2px;
+    box-shadow: 5px 5px black;
+}
