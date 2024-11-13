@@ -8,12 +8,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Menu</title>
+<title>Create Your Suggestion</title>
 <link rel="icon" type="image/png" href="/img/Ramen_Noodles_Icon.png" />
 <!-- for Bootstrap CSS -->
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
 <!-- YOUR own local CSS -->
-<link rel="stylesheet" href="/css/menuPage.css"/>
+<link rel="stylesheet" href="/css/createSuggestionPage.css"/>
 <!-- For any Bootstrap that uses JS -->
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <!-- YOUR own local JavaScript -->
@@ -29,7 +29,7 @@
 			class="navbar-brand" style="width: 100px;"></a>
 		<a href="/ramen" class="navTitle">Ramen Suki!</a>
 	</div>
-		<a href="/ramen/menu" class="activeNavButton btn">Menu</a>
+		<a href="/ramen/menu" class="nav-item btn">Menu</a>
 		<a href="/ramen/location" class="nav-item btn">Location</a>
 		<a href="/ramen/SOTW" class="nav-item btn">Soup Of The Week</a>
 		<a href="/ramen/about" class="nav-item btn">About Us</a>
@@ -46,10 +46,14 @@
 		</c:if>
 		</div>
 	</nav>
-	<div class="menupageBody">
-		<h1>Our Menu</h1>
+	<div class="createSuggestionBody">
+		<h1>Create Your Suggestion</h1>
 		<div>
-		<h2>Ramen</h2>
+			<form:form action="/ramen/create/suggestion" method="POST" modelAttribute="suggestion" class="suggestionForm">
+				<form:errors path="suggestionText" class="text-danger" />
+				<form:textarea path="suggestionText" class="suggestionInput" placeholder="Leave A Suggestion!" rows="4" cols="50"/>
+				<input type="submit" value="Submit" class="submitBtn" />
+			</form:form>
 		</div>
 	</div>
 </body>

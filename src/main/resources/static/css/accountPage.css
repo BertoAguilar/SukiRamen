@@ -12,27 +12,23 @@
 .navTitle{
 	font-size: 55px;
 	font-family: 'Aclonica';
-	color: black;
+	color:black;
 }
 .navbar a{
 	text-decoration: none;
 }
 .activeNavButton{
 	font-size: 23px;
-	color: gray;
 	border: solid gray 2px;
    	font-family: 'Actor';
+   	color: gray;
 }
 .nav-item {
 	font-size: 23px;
-	color: black;
 	border: solid black 2px;
     box-shadow: 2px 2px black;
    	font-family: 'Actor';
-}
-.activeNavButton:hover{
-	font-size: 25px;
-	border: solid black 2px;
+   	color: black;
 }
 .nav-item:hover{
 	font-size: 25px;
@@ -50,36 +46,69 @@
 	border: solid black 2px;
     box-shadow: 5px 5px black;
 }
-.aboutpageBody{
+.accountPageBody{
 	margin: 0;
     background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/img/ramen_shop.jpg') no-repeat center center/cover;
-    height: 150vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 25px;
-}
-.chefImg{
-	width:200px;
-	border: solid black 1px;
-}
-.kitchenStaffImg {
-	width:400px;
-	border: solid black 1px;
-}
-.sukiLogoImg {
-	width:200px;
-	border: solid black 1px;
+    color: white;
+    font-family: 'Actor';
+    text-shadow: black 1px 0 10px;
 }
 h1 {
-	color:white;
 	font-family: 'Aclonica';
-	text-shadow: black 1px 0 10px;
 }
-p {
-	font-size: large;
-	color:white;
-	font-family: 'Actor';
-	text-shadow: black 1px 0 10px;
+.accountDetails{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: normal;
+    font-size: x-large;
+}
+.loginBtn, .regBtn{
+	font-size: 23px;
+	color: white;
+	border: solid rgb(238,234,213) 2px;
+	border-radius: 40px;
+	box-shadow: 3px 3px black;
+}
+
+.loginBtn:hover, .regBtn:hover{
+	color: black;
+	background: rgb(238,234,213);
+	border: solid black 2px;
+	text-shadow: none;
+	box-shadow: 5px 5px black;
+}
+
+.noAccount{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sadRamen{
+	width:150px;
+}
+
+.noAccount a{
+	width: 250px;
+	margin: 15px;
+}
+
+.logout{
+	font-size: 23px;
+	color: white;
+	border: solid #BA0021 2px;
+	border-radius: 40px;
+	box-shadow: 2px 2px black;
+}
+.logout:hover{
+	background: #BA0021;
+	border: solid black 2px;
+    box-shadow: 5px 5px black;
 }

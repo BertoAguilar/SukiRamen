@@ -24,6 +24,10 @@
    	color: gray;
 	
 }
+.activeNavButton:hover{
+	font-size: 25px;
+	border: solid black 2px;
+}
 .nav-item {
 	font-size: 23px;
 	border: solid black 2px;

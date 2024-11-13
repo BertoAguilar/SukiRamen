@@ -22,11 +22,11 @@ public class UserController {
 	@Autowired
 	UserService users;
 	
-	@GetMapping("/login")
+	@GetMapping("/ramen/login")
 	public String login(Model model) {
         model.addAttribute("newUser", new User());
         model.addAttribute("newLogin", new LoggedInUser());
-		return "login.jsp";
+		return "loginPage.jsp";
 	}
 	
 	  // checks if you have an account and logs you in
@@ -35,7 +35,7 @@ public class UserController {
         User user = users.login(newLogin, result);
         if (result.hasErrors()) {
             model.addAttribute("newUser", new User());
-            return "login.jsp";
+            return "loginPage.jsp";
         } else {
             session.setAttribute("userId", user.getId());
             return "redirect:/ramen";
@@ -43,11 +43,11 @@ public class UserController {
     }
     
     // Register page
-    @GetMapping("/register")
+    @GetMapping("/ramen/register")
     public String register(Model model) {
         model.addAttribute("newUser", new User());
         model.addAttribute("newLogin", new LoggedInUser());
-        return "register.jsp";
+        return "registerPage.jsp";
     }
 
     // checks if you are already registered with email, if not registers you
@@ -56,7 +56,7 @@ public class UserController {
         users.register(newUser, result);
         if (result.hasErrors()) {
             model.addAttribute("newLogin", new LoggedInUser());
-            return "register.jsp";
+            return "registerPage.jsp";
         } else {
             session.setAttribute("userId", newUser.getId());
             return "redirect:/ramen";
@@ -69,5 +69,4 @@ public class UserController {
         session.invalidate();
         return "redirect:/";
     }
-
 }

@@ -1,0 +1,136 @@
+@charset "UTF-8";
+.navbar{
+	border: solid 3px black;
+	background-color: rgb(238,234,213);
+	padding: 15px;
+}
+.navLogoTitle{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.navTitle{
+	font-size: 55px;
+	font-family: 'Aclonica';
+	color:black;
+}
+.navbar a{
+	text-decoration: none;
+}
+.activeNavButton{
+	font-size: 23px;
+	border: solid gray 2px;
+   	font-family: 'Actor';
+   	color: gray;
+	
+}
+.activeNavButton:hover{
+	font-size: 25px;
+	border: solid black 2px;
+}
+.nav-item {
+	font-size: 23px;
+	border: solid black 2px;
+    box-shadow: 2px 2px black;
+   	font-family: 'Actor';
+   	color: black;
+}
+.nav-item:hover{
+	font-size: 25px;
+	border: solid black 2px;
+    box-shadow: 5px 5px black;
+}
+.nav-logReg{
+	font-size: 23px;
+	border: solid black 2px;
+	box-shadow: 2px 2px black;
+	margin: 0 3px;
+}
+.nav-logReg:hover{
+	font-size: 25px;
+	border: solid black 2px;
+    box-shadow: 5px 5px black;
+}
+.suggestionBody{
+	margin: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/img/ramen_shop.jpg') no-repeat center center/cover;
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    color: white;
+}
+h1 {
+	font-family: 'Aclonica';
+}
+/* Start Of No Account Logged In */
+.noAccountSuggestionBody{
+	margin: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/img/ramen_shop.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    color: white;
+}
+.noAccount{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sadRamen{
+	width:150px;
+}
+
+.noAccount a{
+	width: 250px;
+	margin: 15px;
+}
+.loginBtn, .regBtn{
+	font-size: 23px;
+	color: white;
+	border: solid rgb(238,234,213) 2px;
+	border-radius: 40px;
+	box-shadow: 3px 3px black;
+}
+
+.loginBtn:hover, .regBtn:hover{
+	color: black;
+	background: rgb(238,234,213);
+	border: solid black 2px;
+	text-shadow: none;
+	box-shadow: 5px 5px black;
+}
+.allSuggestionsContainer{
+	margin: 0 25px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 10px;
+	
+}
+/* End Of No Account Logged In */
+.suggestionCard {
+	background: white;
+	color: black;
+	border: solid 2px black;
+	border-radius: 20px;
+	padding: 10px;
+	max-width: 300px;
+	max-height: min-content;
+}
+.likeSection{
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	gap: 40px;
+	font-size: xx-large;
+}
+.likeBtn{
+	width: 50px;
+}

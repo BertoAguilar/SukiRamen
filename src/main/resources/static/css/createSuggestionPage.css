@@ -24,6 +24,10 @@
    	color: gray;
 	
 }
+.activeNavButton:hover{
+	font-size: 25px;
+	border: solid black 2px;
+}
 .nav-item {
 	font-size: 23px;
 	border: solid black 2px;
@@ -47,7 +51,7 @@
 	border: solid black 2px;
     box-shadow: 5px 5px black;
 }
-.loginpageBody{
+.createSuggestionBody{
 	margin: 0;
     background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/img/ramen_shop.jpg') no-repeat center center/cover;
     height: 100vh;
@@ -57,4 +61,30 @@
     justify-content: center;
     gap: 25px;
     color: white;
+}
+h1 {
+	font-family: 'Aclonica';
+}
+.suggestionForm{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.suggestionInput{
+	border:solid black 2px;
+	box-shadow: 3px 3px black;
+}
+.submitBtn{
+	font-family: 'Aclonica';
+	font-size: 23px;
+	color: white;
+	background-color: green;
+	border: solid black 2px;
+	border-radius: 40px;
+	box-shadow: 3px 3px black;
+	margin-top: 15px;
+}
+.submitBtn:hover{
+	color: black;
+	box-shadow: 5px 5px black;
 }

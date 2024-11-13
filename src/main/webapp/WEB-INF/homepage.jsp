@@ -33,14 +33,14 @@
 		<a href="/ramen/location" class="nav-item btn">Location</a>
 		<a href="/ramen/SOTW" class="nav-item btn">Soup Of The Week</a>
 		<a href="/ramen/about" class="nav-item btn">About Us</a>
-		<a href="#" class="nav-item btn">Suggestions</a>
+		<a href="/ramen/suggestions" class="nav-item btn">Suggestions</a>
 		<c:if test="${user != null}">
 			<a href="logout" class="nav-logReg btn">Log Out</a>
 		</c:if>
 		<c:if test="${user.id == null}">
 			<div>
-				<a href="/login" class="nav-logReg btn">Sign in</a>
-				<a href="/register" class="nav-logReg btn">Register</a>
+				<a href="/ramen/login" class="nav-logReg btn">Sign in</a>
+				<a href="/ramen/register" class="nav-logReg btn">Register</a>
 			</div>
 		</c:if>
 	</nav>
@@ -51,13 +51,34 @@
 				<h1>Welcome Admin ${user.firstName}</h1>
 				<p>Bringing authentic Japanese flavors to you!</p>
 			</div>
+				<div class="homepageDashboard">
+				<div class="topHalfHomepage">
+					<a href="/admin/ramen/menu/crud">
+					<button class="homepageMenu">
+						<img alt="ramen noodle bowl" src="/img/ramen-noodle-japanese.png" class="homepageIconImg">
+						<h2>Edit Menu!</h2>
+					</button>
+					</a>
+					<a href="/admin/ramen/sotw/crud">
+					<button class="homepageLocation">
+						<img src="/img/soup_Of_Week.png" alt="location Icon" class="homepageIconImg">
+						<h2>Select S.O.T.W!</h2>
+					</button>
+					</a>
+					<a href="/admin/ramen/users">
+					<button class="homepageLocation">
+						<img src="/img/admin_icon.png" alt="location Icon" class="homepageIconImg">
+						<h2>Admin Tools</h2>
+					</button>
+					</a>
+				</div>
+			</div>
 		</c:if>
-		<c:if test="${user.isAdmin == false}">
+		<c:if test="${user.isAdmin == false or user.isAdmin == null}">
 			<div class="homepageTitle">
 				<h1>Welcome To Ramen Suki!</h1>
 				<p>Bringing authentic Japanese flavors to you!</p>
 			</div>
-		</c:if>
 
 		<div class="homepageDashboard">
 		
@@ -84,7 +105,7 @@
 						<h2>About Us!</h2>
 					</button>
 				</a>
-				<a href="/ramen/login">
+				<a href="/ramen/myAccount">
 					<button class="homepageLoginReg">
 						<img src="/img/panda_eating_ramen.png" alt="location Icon" class="homepageIconImg">
 						<h2>My Account!</h2>
@@ -92,7 +113,7 @@
 				</a>
 			</div>
 		</div>
-	
+		</c:if>
 	</div>
 </body>
 </html>

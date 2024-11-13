@@ -33,10 +33,17 @@
 		<a href="/ramen/location" class="nav-item btn">Location</a>
 		<a href="/ramen/SOTW" class="nav-item btn">Soup Of The Week</a>
 		<a href="/ramen/about" class="activeNavButton btn">About Us</a>
-		<a href="#" class="nav-item btn">Suggestions</a>
+		<a href="/ramen/suggestions" class="nav-item btn">Suggestions</a>
 		<div>
-		<a href="/login" class="nav-logReg btn">Sign in</a>
-		<a href="/register" class="nav-logReg btn">Register</a>
+		<c:if test="${user.id != null}">
+			<a href="/logout" class="nav-logReg btn">Log Out</a>
+		</c:if>
+		<c:if test="${user.id == null}">
+			<div>
+				<a href="/ramen/login" class="nav-logReg btn">Sign in</a>
+				<a href="/ramen/register" class="nav-logReg btn">Register</a>
+			</div>
+		</c:if>
 		</div>
 	</nav>
 	<div class="aboutpageBody">

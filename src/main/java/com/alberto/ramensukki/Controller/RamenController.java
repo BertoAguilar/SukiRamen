@@ -23,7 +23,7 @@ public class RamenController {
 	}
 	
 	@GetMapping("/ramen")
-	public String homepage(Model model, HttpSession session) {
+	public String homePage(Model model, HttpSession session) {
 		Long userId = (Long) session.getAttribute("userId");
 		if (userId == null) {
 			return "homepage.jsp";
@@ -34,23 +34,52 @@ public class RamenController {
 
 	
 	@GetMapping("/ramen/menu")
-	public String menuPage(Model model) {
-	return "menupage.jsp";
+	public String menuPage(Model model, HttpSession session) {
+		Long userId = (Long) session.getAttribute("userId");
+		if (userId == null) {
+			return "menuPage.jsp";
+		}
+		model.addAttribute("user", userService.getLoggedInUser(userId));
+		return "menuPage.jsp";
 	}
 	
 	@GetMapping("/ramen/location")
-	public String locationPage(Model model) {
+	public String locationPage(Model model, HttpSession session) {
+		Long userId = (Long) session.getAttribute("userId");
+		if (userId == null) {
+			return "locationPage.jsp";
+		}
+		model.addAttribute("user", userService.getLoggedInUser(userId));
 		return "locationPage.jsp";
 	}
 	
 	@GetMapping("/ramen/SOTW")
-	public String SoupOfTheWeek(Model model) {
+	public String SoupOfTheWeek(Model model, HttpSession session) {
+		Long userId = (Long) session.getAttribute("userId");
+		if (userId == null) {
+			return "SoupOfWeek.jsp";
+		}
+		model.addAttribute("user", userService.getLoggedInUser(userId));
 		return "SoupOfWeek.jsp";
 	}
 	
-	@GetMapping("ramen/about")
-	public String aboutUs(Model model) {
+	@GetMapping("/ramen/about")
+	public String aboutPage(Model model, HttpSession session) {
+		Long userId = (Long) session.getAttribute("userId");
+		if (userId == null) {
+			return "aboutPage.jsp";
+		}
+		model.addAttribute("user", userService.getLoggedInUser(userId));
 		return "aboutPage.jsp";
 	}
 	
+	@GetMapping("/ramen/myAccount")
+	public String accountPage(Model model, HttpSession session) {
+		Long userId = (Long) session.getAttribute("userId");
+		if (userId == null) {
+			return "accountPage.jsp";
+		}
+		model.addAttribute("user", userService.getLoggedInUser(userId));
+		return "accountPage.jsp";
+	}
 }
