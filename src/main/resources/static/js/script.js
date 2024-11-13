@@ -15,3 +15,7 @@ function showConfirmPassword() {
 	    x.type = "password";
 	  }
 	}
+	
+function confirmDestroy(){
+	alert("Are You Sure You Want To Delete This Comment?");
+}

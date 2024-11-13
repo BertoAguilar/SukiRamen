@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -66,7 +67,7 @@ public class SuggestionController {
         return "redirect:/ramen/suggestions";
 	}
 	
-	@PostMapping("ramen/suggestions/{id}/like")
+	@PostMapping("ramen/suggestions/like/{id}")
 	public String likeSuggestion(@PathVariable("id") Long id, HttpSession session) {
 	    Long userId = (Long) session.getAttribute("userId");
 	    if (userId == null) {
@@ -74,6 +75,14 @@ public class SuggestionController {
 	    }
 	    suggestions.likeSuggestion(id);
 	    return "redirect:/ramen/suggestions";
+	}
+	
+	// Delete a suggestion by id
+
+	@DeleteMapping("/ramen/suggestion/destroy/{id}")
+	public String destroyComment(@PathVariable("id") Long id) {
+		suggestions.deleteSuggestion(id);
+		return "redirect:/ramen/suggestions";
 	}
 
 }

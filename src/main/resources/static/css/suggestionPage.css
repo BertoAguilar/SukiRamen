@@ -116,13 +116,14 @@ h1 {
 }
 /* End Of No Account Logged In */
 .suggestionCard {
-	background: white;
+	background: rgb(238,234,213);
 	color: black;
 	border: solid 2px black;
 	border-radius: 20px;
 	padding: 10px;
-	max-width: 300px;
-	max-height: min-content;
+	width: 300px;
+	height: 230px;
+	overflow-y:auto;
 }
 .likeSection{
 	display: flex;
@@ -133,4 +134,19 @@ h1 {
 }
 .likeBtn{
 	width: 50px;
+}
+.dateAndDestroy {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+    align-items: center;
+}
+.deleteBtn{
+	background-color: #BA0021;
+	color: white;
+}
+.deleteBtn:hover{
+	background: #BA0021;
+	border: solid black 2px;
+    box-shadow: 5px 5px black;
 }

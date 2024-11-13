@@ -73,11 +73,19 @@
 					<div class="suggestionCard">
 						<h2><c:out value="${suggestion.user.firstName}"/> <c:out value="${suggestion.user.lastName }"/></h2>
 						<p><c:out value="${suggestion.suggestionText}"/></p>
-						<form:form action="/ramen/suggestions/${suggestion.id}/like" method="POST" class="likeSection">
+						<form:form action="/ramen/suggestions/like/${suggestion.id}" method="POST" class="likeSection">
 							<p id="likeCount">Likes: <c:out value="${suggestion.likeCount}"/></p>
 							<input type="image" src="/img/like_icon.png" class="likeBtn" type="submit" id="likeButton"/>
 						</form:form>
+						<div class="dateAndDestroy">
 						<p><fmt:formatDate value="${suggestion.createdAt}" pattern="MMM dd yyyy HH:mm a"/></p>
+						<c:if test="${suggestion.user.id == user.id or user.isAdmin == true}">
+							<form action="/ramen/suggestion/destroy/${suggestion.id}" method="post">
+                            <input type="hidden" name="_method" value="delete">
+                            <input type="submit" value="Delete" class="deleteBtn btn" onclick="return confirm('Are You Sure You Want To Delete This Comment?');">
+                        </form>
+						</c:if>
+						</div>
 					</div>
 				</c:forEach>
 			</div>
