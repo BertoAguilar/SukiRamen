@@ -13,7 +13,7 @@
 <!-- for Bootstrap CSS -->
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
 <!-- YOUR own local CSS -->
-<link rel="stylesheet" href="/css/menuPage.css"/>
+<link rel="stylesheet" href="/css/menuItemPage.css"/>
 <!-- For any Bootstrap that uses JS -->
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <!-- YOUR own local JavaScript -->
@@ -47,14 +47,19 @@
 		</div>
 	</nav>
 	<div class="menupageBody">
-		<h1>Our Menu</h1>
-		<div class="linkContainer">
-			<a href="/ramen/menu/ramen">View Our Ramen Section</a>
-			<a href="/ramen/menu/sides">View Our Sides Section</a>
-		</div>
-		<div class="linkContainer">
-			<a href="/ramen/menu/appetizers">View Our Appetizers Section</a>
-			<a href="/ramen/menu/drinks">View Our Drinks Section</a>
+		<h1>Our Appetizer Menu</h1>
+		<div class="menuItemsContainer">
+			<c:forEach var="menu" items="${menus}">
+				<c:if test="${menu.courseOption == 'Appetizer'}">
+					<div class="menuItemCard">
+						<img src="/uploads/cover_pictures/${menu.coverImage}" class="menuItemIMG">
+						<div class="menItemText">
+							<h2><c:out value="${menu.itemName}"/> <c:out value="${suggestion.user.lastName }"/></h2>
+							<p>$<c:out value="${menu.price}"/></p>
+						</div>
+					</div>
+				</c:if>
+			</c:forEach>
 		</div>
 	</div>
 </body>

@@ -31,17 +31,6 @@ public class RamenController {
 		model.addAttribute("user", userService.getLoggedInUser(userId));
 		return "homepage.jsp";
 	}
-
-	
-	@GetMapping("/ramen/menu")
-	public String menuPage(Model model, HttpSession session) {
-		Long userId = (Long) session.getAttribute("userId");
-		if (userId == null) {
-			return "menuPage.jsp";
-		}
-		model.addAttribute("user", userService.getLoggedInUser(userId));
-		return "menuPage.jsp";
-	}
 	
 	@GetMapping("/ramen/location")
 	public String locationPage(Model model, HttpSession session) {

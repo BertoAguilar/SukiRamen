@@ -54,7 +54,7 @@
 .menupageBody{
 	margin: 0;
     background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/img/ramen_shop.jpg') no-repeat center center/cover;
-    height: 100vh;
+    height: 150vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,8 +62,29 @@
     gap: 25px;
     color: white;
 }
-.linkContainer {
-	display: flex;
+h1, h2{
+	font-family: 'Aclonica'
+}
+.menuItemsContainer{
+	display: flex; 
 	flex-direction: row;
-	gap: 50px;
+	flex-wrap: wrap;
+	gap: 25px;
+}
+.menuItemCard{
+	background-color:rgb(238,234,213);
+	border:solid black 2px;
+	color: black;
+	box-shadow: 2px 2px black;
+}
+.menuItemIMG {
+    height: 300px; 
+}
+.menItemText{
+	display: flex; 
+	flex-direction: column;
+	align-items: center;
+	margin-top: 5px;
+	font-family: 'Actor';
+	font-size: xx-large;
 }

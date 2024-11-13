@@ -51,7 +51,7 @@
 	border: solid black 2px;
     box-shadow: 5px 5px black;
 }
-.menupageBody{
+.newMenuBody{
 	margin: 0;
     background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/img/ramen_shop.jpg') no-repeat center center/cover;
     height: 100vh;
@@ -62,8 +62,6 @@
     gap: 25px;
     color: white;
 }
-.linkContainer {
-	display: flex;
-	flex-direction: row;
-	gap: 50px;
+h1{
+	font-family: 'Aclonica'
 }

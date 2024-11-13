@@ -53,10 +53,10 @@
 			</div>
 				<div class="homepageDashboard">
 				<div class="topHalfHomepage">
-					<a href="/admin/ramen/menu/crud">
+					<a href="/admin/ramen/menu/create">
 					<button class="homepageMenu">
 						<img alt="ramen noodle bowl" src="/img/ramen-noodle-japanese.png" class="homepageIconImg">
-						<h2>Edit Menu!</h2>
+						<h2>Add To Menu!</h2>
 					</button>
 					</a>
 					<a href="/admin/ramen/sotw/crud">
