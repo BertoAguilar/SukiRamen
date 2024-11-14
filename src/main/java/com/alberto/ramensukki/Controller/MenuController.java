@@ -167,7 +167,7 @@ public class MenuController {
 	}
 	
 	@GetMapping("/admin/ramen/dotw/crud")
-	public String selectDealForm(@ModelAttribute("menu") Menu menu,HttpSession session, Model model) {
+	public String selectDealForm(@ModelAttribute("menu") Menu menu, HttpSession session, Model model) {
 		Long userId = (Long) session.getAttribute("userId");
 		if (userId == null) {
 			return "redirect:/";
@@ -179,13 +179,14 @@ public class MenuController {
 	}
 	
 	@PostMapping("/admin/ramen/dotw/select")
-	public String selectDeal(@ModelAttribute("menu") Menu menu,HttpSession session, Model model) {
+	public String selectDeal(@ModelAttribute("menu") Menu menu, @RequestParam("discount") Integer discount, HttpSession session, Model model) {
 		Long userId = (Long) session.getAttribute("userId");
 		if (userId == null) {
 			return "redirect:/";
 		}
 		model.addAttribute("user", userService.getLoggedInUser(userId));
 		menuService.setDealOfTheWeek(menu.getId());
+		menuService.setDiscount(discount);
 		return "redirect:/ramen/DOTW";
 	}
 }

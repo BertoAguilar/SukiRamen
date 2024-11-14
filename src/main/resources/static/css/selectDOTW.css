@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .navbar{
 	border: solid 3px black;
-	background-color: rgb(76,114,115);
+	background-color: rgb(238,234,213);
 	padding: 15px;
 }
 .navLogoTitle{
@@ -59,4 +59,24 @@
     justify-content: center;
     gap: 25px;
     color: white;
+}
+h1{
+	font-family: 'Aclonica';
+}
+.dotwForm{
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	
+}
+.discountContainer {
+	display: flex;
+	flex-direction: row;
+	gap: 50px;
+}
+.discountLabel{
+	font-size: x-large;	
+}
+.discountInput{
+	width: 55px;
 }

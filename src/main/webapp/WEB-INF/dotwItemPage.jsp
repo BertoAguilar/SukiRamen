@@ -13,7 +13,7 @@
 <!-- for Bootstrap CSS -->
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
 <!-- YOUR own local CSS -->
-<link rel="stylesheet" href="/css/menupage.css"/>
+<link rel="stylesheet" href="/css/dotwItemPage.css"/>
 <!-- For any Bootstrap that uses JS -->
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <!-- YOUR own local JavaScript -->
@@ -52,9 +52,10 @@
 		<c:forEach var="menu" items="${menus}">
 			<c:if test="${menu.isDealOfWeekBoolean == true}">
 				<div class="menuItemCard">
-					<img src="/uploads/cover_pictures/${menu.coverImage}" class="menuItemIMG">
+					<img src="/uploads/cover_pictures/${menu.coverImage}" class="dotwItemIMG">
 					<div class="menItemText">
 						<h2><c:out value="${menu.itemName}"/></h2>
+						<p><c:out value="${menu.discount}"/>% OFF!</p>
 					</div>
 				</div>
 			</c:if>

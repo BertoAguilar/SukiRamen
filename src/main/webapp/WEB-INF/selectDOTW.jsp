@@ -49,14 +49,18 @@
 	<div class="dotwpageBody">
 		<h1>Select The Deal Of The Week</h1>
 		<div>
-			<form:form action="/admin/ramen/dotw/select" method="POST" modelAttribute="menu">
-				<select name="id" id="menuId">
-				<option selected disabled>Select The Deal Of The Week</option>
+			<form:form action="/admin/ramen/dotw/select" method="POST" modelAttribute="menu" class="dotwForm">
+				<select name="id" id="menuId" required>
+				<option selected disabled>Menu Items</option>
 				<c:forEach var="menu" items="${menus}">
 					<option value="${menu.id}"><c:out value="${menu.itemName}"/></option>
 				</c:forEach>
 				</select>
-				<input type="submit" value="Submit" class="btn btn-primary" />
+				<div class="discountContainer">
+					<form:label path="discount" class="discountLabel">Discount</form:label>
+					<form:input type="number" path="discount" id="discount" class="discountInput" max="100" min="1" required="yes"/>
+				</div>
+				<input type="submit" value="Submit" class="btn btn-success" />
 			</form:form>
 		</div>
 	</div>

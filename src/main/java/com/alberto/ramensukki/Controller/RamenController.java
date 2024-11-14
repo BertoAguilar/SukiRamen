@@ -5,7 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
+import com.alberto.ramensukki.Model.Menu;
 import com.alberto.ramensukki.Service.UserService;
 
 import jakarta.servlet.http.HttpSession;
@@ -61,5 +63,15 @@ public class RamenController {
 		}
 		model.addAttribute("user", userService.getLoggedInUser(userId));
 		return "accountPage.jsp";
+	}
+	
+	@GetMapping("/admin/ramen/tools")
+	public String newMenuItem(@ModelAttribute("menu") Menu menu,HttpSession session, Model model) {
+		Long userId = (Long) session.getAttribute("userId");
+		if (userId == null) {
+			return "redirect:/";
+		}
+		model.addAttribute("user", userService.getLoggedInUser(userId));
+		return "adminToolsPage.jsp";
 	}
 }

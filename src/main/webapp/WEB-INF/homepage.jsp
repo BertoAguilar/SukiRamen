@@ -65,7 +65,7 @@
 						<h2>Select D.O.T.W!</h2>
 					</button>
 					</a>
-					<a href="/admin/ramen/users">
+					<a href="/admin/ramen/tools">
 					<button class="homepageLocation">
 						<img src="/img/admin_icon.png" alt="location Icon" class="homepageIconImg">
 						<h2>Admin Tools</h2>

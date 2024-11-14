@@ -22,11 +22,6 @@
 	border: solid gray 2px;
    	font-family: 'Actor';
    	color: gray;
-	
-}
-.activeNavButton:hover{
-	font-size: 25px;
-	border: solid black 2px;
 }
 .nav-item {
 	font-size: 23px;
@@ -51,7 +46,7 @@
 	border: solid black 2px;
     box-shadow: 5px 5px black;
 }
-.menupageBody{
+.accountPageBody{
 	margin: 0;
     background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/img/ramen_shop.jpg') no-repeat center center/cover;
     height: 100vh;
@@ -61,24 +56,70 @@
     justify-content: center;
     gap: 25px;
     color: white;
+    font-family: 'Actor';
+    text-shadow: black 2px 0 10px;
 }
-h1{
-	font-family: 'Aclonica'
+h1, h2 {
+	font-family: 'Aclonica';
 }
-.dotwItemIMG {
-	height: 300px;
+.accountDetails{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: normal;
+    font-size: x-large;
 }
-.menuItemCard{
-	background-color:rgb(238,234,213);
-	border:solid black 2px;
+.loginBtn, .regBtn{
+	font-size: 23px;
+	color: white;
+	border: solid rgb(238,234,213) 2px;
+	border-radius: 40px;
+	box-shadow: 3px 3px black;
+}
+
+.loginBtn:hover, .regBtn:hover{
 	color: black;
+	background: rgb(238,234,213);
+	border: solid black 2px;
+	text-shadow: none;
+	box-shadow: 5px 5px black;
+}
+
+.notAdmin{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.madRamen{
+	width:250px;
+}
+.notAdminRemoval{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.notAdmin a{
+	width: 300px;
+	margin: 15px;
+}
+
+.home{
+	font-size: 23px;
+	color: white;
+	border: solid rgb(76,114,115) 2px;
+	border-radius: 40px;
 	box-shadow: 2px 2px black;
 }
-.menItemText{
-	display: flex; 
-	flex-direction: column;
-	align-items: center;
-	margin-top: 5px;
-	font-family: 'Actor';
+.home:hover{
+	background: rgb(76,114,115);
+	border: solid black 2px;
+    box-shadow: 5px 5px black;
+}
+.toolCategory {
 	font-size: xx-large;
+}
+li {
+	font-size: large;
 }

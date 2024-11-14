@@ -51,4 +51,11 @@ public class MenuService {
 	        menuRepo.save(menu);
 	    }
 	}
+	public void setDiscount(Integer discount) {
+	    List<Menu> allMenus = allMenus();
+	    for (Menu menu : allMenus) {
+	        menu.setDiscount(discount);
+	        menuRepo.save(menu);
+	    }
+	}
 }

@@ -38,6 +38,8 @@ public class Menu {
 	
 	private Boolean isDealOfWeekBoolean = false;
 	
+	private Integer discount = 0;
+	
 	@Column(updatable = false)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date createdAt;
@@ -120,5 +122,12 @@ public class Menu {
 	public void setIsDealOfWeekBoolean(Boolean isDealOfWeekBoolean) {
 		this.isDealOfWeekBoolean = isDealOfWeekBoolean;
 	}
-	
+
+	public Integer getDiscount() {
+		return discount;
+	}
+
+	public void setDiscount(Integer discount) {
+		this.discount = discount;
+	}
 }
