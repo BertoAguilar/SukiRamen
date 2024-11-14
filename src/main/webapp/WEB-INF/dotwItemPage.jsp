@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!-- Format Date -->
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!-- For JSTL Forms -->
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ page isErrorPage="true"%>
@@ -10,12 +8,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Menu</title>
+<title>Soup of The Week</title>
 <link rel="icon" type="image/png" href="/img/Ramen_Noodles_Icon.png" />
 <!-- for Bootstrap CSS -->
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
 <!-- YOUR own local CSS -->
-<link rel="stylesheet" href="/css/accountPage.css"/>
+<link rel="stylesheet" href="/css/menupage.css"/>
 <!-- For any Bootstrap that uses JS -->
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <!-- YOUR own local JavaScript -->
@@ -31,9 +29,9 @@
 			class="navbar-brand" style="width: 100px;"></a>
 		<a href="/ramen" class="navTitle">Ramen Suki!</a>
 	</div>
-		<a href="/ramen/menu" class="nav-item btn active">Menu</a>
+		<a href="/ramen/menu" class="nav-item btn">Menu</a>
 		<a href="/ramen/location" class="nav-item btn">Location</a>
-		<a href="/ramen/DOTW" class="nav-item btn">Deal Of The Week</a>
+		<a href="/ramen/DOTW" class="activeNavButton btn">Deal Of The Week</a>
 		<a href="/ramen/about" class="nav-item btn">About Us</a>
 		<a href="/ramen/suggestions" class="nav-item btn">Suggestions</a>
 		<div>
@@ -48,27 +46,19 @@
 		</c:if>
 		</div>
 	</nav>
-	<div class="accountPageBody">
-		<h1>Account Details</h1>
-		<c:if test="${user.id == null}">
-			<h2>You Are Currently Not Logged In!</h2>
-			<div class="noAccount">
-				<img src="/img/sad_ramen_bowl.png" alt="sad ramen bowl" class="sadRamen">
-				<div>
-					<a href="/ramen/login" class="loginBtn btn">Sign in</a>
-					<a href="/ramen/register" class="regBtn btn">Register</a>
+	
+	<div class="menupageBody">
+		<h1>The Deal Of The Week Is</h1>
+		<c:forEach var="menu" items="${menus}">
+			<c:if test="${menu.isDealOfWeekBoolean == true}">
+				<div class="menuItemCard">
+					<img src="/uploads/cover_pictures/${menu.coverImage}" class="menuItemIMG">
+					<div class="menItemText">
+						<h2><c:out value="${menu.itemName}"/></h2>
+					</div>
 				</div>
-			</div>
-		</c:if>
-		
-		<c:if test="${user != null}">
-			<div class="accountDetails">
-				<p>Name: <c:out value="${user.firstName}"></c:out> <c:out value="${user.lastName}"></c:out></p>
-				<p>Email: <c:out value="${user.email}"></c:out></p>
-				<p>Created: <fmt:formatDate value="${user.createdAt}" pattern="MMM dd yyyy HH:mm a"/></p>
-				<a href="/logout" class="logout btn">Log Out</a>
-			</div>
-		</c:if>
+			</c:if>
+		</c:forEach>
 	</div>
 </body>
 </html>

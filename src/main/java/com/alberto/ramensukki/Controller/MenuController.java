@@ -53,7 +53,7 @@ public class MenuController {
 		return "newMenuItem.jsp";
 	}
 	
-	// Actually creates the new menu
+	// Actually creates the new menu item
 	@PostMapping("/admin/ramen/menu/createNew")
     public String createMenuItem(@Valid @ModelAttribute("menu") Menu menu, BindingResult result,
             @RequestParam("coverPicture") MultipartFile file, HttpSession session) {
@@ -100,6 +100,8 @@ public class MenuController {
 	public String menuRamenPage(Model model, HttpSession session) {
 		Long userId = (Long) session.getAttribute("userId");
 		if (userId == null) {
+			List<Menu> menuList = menuService.allMenus();
+			model.addAttribute("menus", menuList);
 			return "menuRamenPage.jsp";
 		}
 		model.addAttribute("user", userService.getLoggedInUser(userId));
@@ -112,6 +114,8 @@ public class MenuController {
 	public String menuSidesPage(Model model, HttpSession session) {
 		Long userId = (Long) session.getAttribute("userId");
 		if (userId == null) {
+			List<Menu> menuList = menuService.allMenus();
+			model.addAttribute("menus", menuList);
 			return "menuSidesPage.jsp";
 		}
 		model.addAttribute("user", userService.getLoggedInUser(userId));
@@ -124,6 +128,8 @@ public class MenuController {
 	public String menuAppetizersPage(Model model, HttpSession session) {
 		Long userId = (Long) session.getAttribute("userId");
 		if (userId == null) {
+			List<Menu> menuList = menuService.allMenus();
+			model.addAttribute("menus", menuList);
 			return "menuAppetizersPage.jsp";
 		}
 		model.addAttribute("user", userService.getLoggedInUser(userId));
@@ -136,11 +142,50 @@ public class MenuController {
 	public String menuDrinksPage(Model model, HttpSession session) {
 		Long userId = (Long) session.getAttribute("userId");
 		if (userId == null) {
+			List<Menu> menuList = menuService.allMenus();
+			model.addAttribute("menus", menuList);
 			return "menuDrinksPage.jsp";
 		}
 		model.addAttribute("user", userService.getLoggedInUser(userId));
 		List<Menu> menuList = menuService.allMenus();
 		model.addAttribute("menus", menuList);
 		return "menuDrinksPage.jsp";
+	}
+	
+	@GetMapping("/ramen/DOTW")
+	public String DealOfTheWeek(Model model, HttpSession session) {
+		Long userId = (Long) session.getAttribute("userId");
+		if (userId == null) {
+			List<Menu> menuList = menuService.allMenus();
+			model.addAttribute("menus", menuList);
+			return "dotwItemPage.jsp";
+		}
+		model.addAttribute("user", userService.getLoggedInUser(userId));
+		List<Menu> menuList = menuService.allMenus();
+		model.addAttribute("menus", menuList);
+		return "dotwItemPage.jsp";
+	}
+	
+	@GetMapping("/admin/ramen/dotw/crud")
+	public String selectDealForm(@ModelAttribute("menu") Menu menu,HttpSession session, Model model) {
+		Long userId = (Long) session.getAttribute("userId");
+		if (userId == null) {
+			return "redirect:/";
+		}
+		model.addAttribute("user", userService.getLoggedInUser(userId));
+		List<Menu> menuList = menuService.allMenus();
+		model.addAttribute("menus", menuList);
+		return "selectDOTW.jsp";
+	}
+	
+	@PostMapping("/admin/ramen/dotw/select")
+	public String selectDeal(@ModelAttribute("menu") Menu menu,HttpSession session, Model model) {
+		Long userId = (Long) session.getAttribute("userId");
+		if (userId == null) {
+			return "redirect:/";
+		}
+		model.addAttribute("user", userService.getLoggedInUser(userId));
+		menuService.setDealOfTheWeek(menu.getId());
+		return "redirect:/ramen/DOTW";
 	}
 }

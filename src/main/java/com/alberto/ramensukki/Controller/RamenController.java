@@ -1,5 +1,6 @@
 package com.alberto.ramensukki.Controller;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -40,16 +41,6 @@ public class RamenController {
 		}
 		model.addAttribute("user", userService.getLoggedInUser(userId));
 		return "locationPage.jsp";
-	}
-	
-	@GetMapping("/ramen/SOTW")
-	public String SoupOfTheWeek(Model model, HttpSession session) {
-		Long userId = (Long) session.getAttribute("userId");
-		if (userId == null) {
-			return "SoupOfWeek.jsp";
-		}
-		model.addAttribute("user", userService.getLoggedInUser(userId));
-		return "SoupOfWeek.jsp";
 	}
 	
 	@GetMapping("/ramen/about")

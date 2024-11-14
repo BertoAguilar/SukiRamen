@@ -31,7 +31,7 @@
 	</div>
 		<a href="/ramen/menu" class="activeNavButton btn">Menu</a>
 		<a href="/ramen/location" class="nav-item btn">Location</a>
-		<a href="/ramen/SOTW" class="nav-item btn">Soup Of The Week</a>
+		<a href="/ramen/DOTW" class="nav-item btn">Deal Of The Week</a>
 		<a href="/ramen/about" class="nav-item btn">About Us</a>
 		<a href="/ramen/suggestions" class="nav-item btn">Suggestions</a>
 		<div>
@@ -48,13 +48,35 @@
 	</nav>
 	<div class="menupageBody">
 		<h1>Our Menu</h1>
-		<div class="linkContainer">
-			<a href="/ramen/menu/ramen">View Our Ramen Section</a>
-			<a href="/ramen/menu/sides">View Our Sides Section</a>
-		</div>
-		<div class="linkContainer">
-			<a href="/ramen/menu/appetizers">View Our Appetizers Section</a>
-			<a href="/ramen/menu/drinks">View Our Drinks Section</a>
+		<div class="menuItemContainer">
+			<div class="linkContainer">
+				<a href="/ramen/menu/ramen">
+					<button class="allItemPageMenu">
+						<img alt="ramen noodle bowl" src="/img/ramen-noodle-japanese.png" class="menupageIconImg">
+						<h2>Ramen</h2>
+					</button>
+				</a>
+				<a href="/ramen/menu/sides">
+					<button class="allItemPageMenu">
+						<img alt="ramen noodle bowl" src="/img/spring_egg_roll_image.png" class="menupageIconImg">
+						<h2>Sides</h2>
+					</button>
+				</a>
+			</div>
+			<div class="linkContainer">
+				<a href="/ramen/menu/appetizers">
+					<button class="allItemPageMenu">
+						<img alt="ramen noodle bowl" src="/img/tempura_sushi.png" class="menupageIconImg">
+						<h2>Appetizers</h2>
+					</button>
+				</a>
+				<a href="/ramen/menu/drinks">
+					<button class="allItemPageMenu">
+						<img alt="ramen noodle bowl" src="/img/drink_bottle.png" class=drinkmenuIcon>
+						<h2>Drinks</h2>
+					</button>
+				</a>
+			</div>
 		</div>
 	</div>
 </body>

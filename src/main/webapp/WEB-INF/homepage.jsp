@@ -31,7 +31,7 @@
 	</div>
 		<a href="/ramen/menu" class="nav-item btn">Menu</a>
 		<a href="/ramen/location" class="nav-item btn">Location</a>
-		<a href="/ramen/SOTW" class="nav-item btn">Soup Of The Week</a>
+		<a href="/ramen/DOTW" class="nav-item btn">Deal Of The Week</a>
 		<a href="/ramen/about" class="nav-item btn">About Us</a>
 		<a href="/ramen/suggestions" class="nav-item btn">Suggestions</a>
 		<c:if test="${user != null}">
@@ -59,10 +59,10 @@
 						<h2>Add To Menu!</h2>
 					</button>
 					</a>
-					<a href="/admin/ramen/sotw/crud">
+					<a href="/admin/ramen/dotw/crud">
 					<button class="homepageLocation">
 						<img src="/img/soup_Of_Week.png" alt="location Icon" class="homepageIconImg">
-						<h2>Select S.O.T.W!</h2>
+						<h2>Select D.O.T.W!</h2>
 					</button>
 					</a>
 					<a href="/admin/ramen/users">

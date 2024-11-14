@@ -31,7 +31,7 @@
 	</div>
 		<a href="/ramen/menu" class="activeNavButton btn">Menu</a>
 		<a href="/ramen/location" class="nav-item btn">Location</a>
-		<a href="/ramen/SOTW" class="nav-item btn">Soup Of The Week</a>
+		<a href="/ramen/DOTW" class="nav-item btn">Deal Of The Week</a>
 		<a href="/ramen/about" class="nav-item btn">About Us</a>
 		<a href="/ramen/suggestions" class="nav-item btn">Suggestions</a>
 		<div>
@@ -54,7 +54,7 @@
 					<div class="menuItemCard">
 						<img src="/uploads/cover_pictures/${menu.coverImage}" class="menuItemIMG">
 						<div class="menItemText">
-							<h2><c:out value="${menu.itemName}"/> <c:out value="${suggestion.user.lastName }"/></h2>
+							<h2><c:out value="${menu.itemName}"/></h2>
 							<p>$<c:out value="${menu.price}"/></p>
 						</div>
 					</div>

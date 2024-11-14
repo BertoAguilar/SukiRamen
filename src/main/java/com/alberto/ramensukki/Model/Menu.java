@@ -36,6 +36,8 @@ public class Menu {
 	
 	private String coverImage;
 	
+	private Boolean isDealOfWeekBoolean = false;
+	
 	@Column(updatable = false)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date createdAt;
@@ -110,4 +112,13 @@ public class Menu {
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
+
+	public Boolean getIsDealOfWeekBoolean() {
+		return isDealOfWeekBoolean;
+	}
+
+	public void setIsDealOfWeekBoolean(Boolean isDealOfWeekBoolean) {
+		this.isDealOfWeekBoolean = isDealOfWeekBoolean;
+	}
+	
 }

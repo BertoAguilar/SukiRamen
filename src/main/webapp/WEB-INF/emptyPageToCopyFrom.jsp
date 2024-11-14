@@ -31,7 +31,7 @@
 	</div>
 		<a href="/ramen/menu" class="activeNavButton btn">Menu</a>
 		<a href="/ramen/location" class="nav-item btn">Location</a>
-		<a href="/ramen/SOTW" class="nav-item btn">Soup Of The Week</a>
+		<a href="/ramen/DOTW" class="nav-item btn">Deal Of The Week</a>
 		<a href="/ramen/about" class="nav-item btn">About Us</a>
 		<a href="/ramen/suggestions" class="nav-item btn">Suggestions</a>
 		<div>
@@ -47,10 +47,7 @@
 		</div>
 	</nav>
 	<div class="menupageBody">
-		<h1>Our Menu</h1>
-		<div>
-		<h2>Ramen</h2>
-		</div>
+		<h1>Empty Page</h1>
 	</div>
 </body>
 </html>

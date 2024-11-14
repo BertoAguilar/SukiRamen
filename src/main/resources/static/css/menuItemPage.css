@@ -88,3 +88,9 @@ h1, h2{
 	font-family: 'Actor';
 	font-size: xx-large;
 }
+.linkContainer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap:75px;
+}

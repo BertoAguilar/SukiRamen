@@ -44,4 +44,11 @@ public class MenuService {
 	public void deleteMenu(Long id) {
 		menuRepo.deleteById(id);
 	}
+	public void setDealOfTheWeek(Long menuId) {
+	    List<Menu> allMenus = allMenus();
+	    for (Menu menu : allMenus) {
+	        menu.setIsDealOfWeekBoolean(menu.getId().equals(menuId));
+	        menuRepo.save(menu);
+	    }
+	}
 }

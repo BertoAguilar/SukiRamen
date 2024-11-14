@@ -8,12 +8,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Soup of The Week</title>
+<title>Deal Of The Week</title>
 <link rel="icon" type="image/png" href="/img/Ramen_Noodles_Icon.png" />
 <!-- for Bootstrap CSS -->
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
 <!-- YOUR own local CSS -->
-<link rel="stylesheet" href="/css/menupage.css"/>
+<link rel="stylesheet" href="/css/selectDOTW.css"/>
 <!-- For any Bootstrap that uses JS -->
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <!-- YOUR own local JavaScript -->
@@ -29,9 +29,9 @@
 			class="navbar-brand" style="width: 100px;"></a>
 		<a href="/ramen" class="navTitle">Ramen Suki!</a>
 	</div>
-		<a href="/ramen/menu" class="nav-item btn">Menu</a>
+		<a href="/ramen/menu" class="activeNavButton btn">Menu</a>
 		<a href="/ramen/location" class="nav-item btn">Location</a>
-		<a href="/ramen/SOTW" class="activeNavButton btn">Soup Of The Week</a>
+		<a href="/ramen/DOTW" class="nav-item btn">Deal Of The Week</a>
 		<a href="/ramen/about" class="nav-item btn">About Us</a>
 		<a href="/ramen/suggestions" class="nav-item btn">Suggestions</a>
 		<div>
@@ -46,6 +46,19 @@
 		</c:if>
 		</div>
 	</nav>
-	Soup of the week!
+	<div class="dotwpageBody">
+		<h1>Select The Deal Of The Week</h1>
+		<div>
+			<form:form action="/admin/ramen/dotw/select" method="POST" modelAttribute="menu">
+				<select name="id" id="menuId">
+				<option selected disabled>Select The Deal Of The Week</option>
+				<c:forEach var="menu" items="${menus}">
+					<option value="${menu.id}"><c:out value="${menu.itemName}"/></option>
+				</c:forEach>
+				</select>
+				<input type="submit" value="Submit" class="btn btn-primary" />
+			</form:form>
+		</div>
+	</div>
 </body>
 </html>
